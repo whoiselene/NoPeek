@@ -1,0 +1,213 @@
+:root {
+  --paper: #FFFFFF;
+  --paper-subtle: #F4F4F4;
+  --paper-dark: #0A0A0A;
+  --ink: #000000;
+  --pencil: #444444;
+  --pencil-light: #777777;
+  --white: #FFFFFF;
+  --accent-badge: #000000;
+  --accent-badge-text: #FFFFFF;
+  --border-thick: 3px solid #000000;
+  --border-thin: 2px solid #000000;
+  --shadow: 4px 4px 0px #000000;
+  --shadow-lg: 8px 8px 0px #000000;
+  --shadow-hover: 6px 6px 0px #000000;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: 'Space Mono', monospace;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #FAFAFA;
+  position: relative;
+  min-height: 100vh;
+}
+
+.sketch-btn {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  border: var(--border-thick);
+  background: #FFFFFF;
+  color: #000000;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: all 0.12s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.sketch-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.sketch-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px #000000;
+}
+
+.sketch-btn.primary {
+  background: #000000;
+  color: #FFFFFF;
+}
+
+.sketch-btn.inverted {
+  background: #FFFFFF;
+  color: #000000;
+}
+
+.sketch-btn.badge {
+  background: #EAEAEA;
+  color: #000000;
+}
+
+.sketch-card {
+  background: #FFFFFF;
+  border: var(--border-thick);
+  box-shadow: var(--shadow-lg);
+  padding: 24px;
+  position: relative;
+}
+
+.tape-corner {
+  position: absolute;
+  top: -12px;
+  left: 30px;
+  width: 90px;
+  height: 28px;
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px dashed rgba(0, 0, 0, 0.5);
+  transform: rotate(-3deg);
+  z-index: 5;
+}
+
+.tape-corner-right {
+  position: absolute;
+  top: -12px;
+  right: 30px;
+  width: 90px;
+  height: 28px;
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px dashed rgba(0, 0, 0, 0.5);
+  transform: rotate(4deg);
+  z-index: 5;
+}
+
+.font-hand {
+  font-family: 'Caveat', cursive;
+}
+
+.font-doodle {
+  font-family: 'Architects Daughter', handwriting;
+}
+
+.font-syne {
+  font-family: 'Syne', sans-serif;
+}
+
+@keyframes pulseWhiteDot {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.3); }
+}
+
+.active-touch-dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  box-shadow: 0 0 10px #FFFFFF;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  animation: pulseWhiteDot 1.2s infinite ease-in-out;
+  z-index: 50;
+}
+
+.speech-bubble {
+  position: relative;
+  background: #FFFFFF;
+  border: var(--border-thin);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 0.9rem;
+  box-shadow: 3px 3px 0px #000000;
+}
+
+.speech-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 20px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #000000;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F4F4F4;
+}
+::-webkit-scrollbar-thumb {
+  background: #000000;
+  border-radius: 3px;
+}
+
+.highlight-mono {
+  background: #000000;
+  color: #FFFFFF;
+  padding: 2px 8px;
+  display: inline-block;
+}
+
+.highlight-border {
+  border: var(--border-thick);
+  padding: 2px 8px;
+  display: inline-block;
+}
+
+.mobile-app-shell {
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: #FFFFFF;
+  border-left: var(--border-thick);
+  border-right: var(--border-thick);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 0 30px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 500px) {
+  .mobile-app-shell {
+    border-left: none;
+    border-right: none;
+    width: 100%;
+  }
+}
