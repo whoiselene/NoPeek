@@ -1,9 +1,7 @@
-# NoPeek
 <div align="center">
 
-<img width="860" height="151" alt="Rust-Cipher-Tool (1)" src="https://github.com/user-attachments/assets/79ad66bb-c08c-4ecd-bd1c-79b612695931" />
+<img width="860" height="151" alt="Rust-Cipher-Tool (1)" src="https://github.com/user-attachments/assets/57731ea3-b0bc-417b-911f-a5aa992ecb3d" />
 
-```
 
 ### Draw blind. Broadcast instantly. Guess before the ink dries.
 
@@ -126,5 +124,9 @@ nopeek/
 ---
 
 <div align="center">
+
+### Turn off the lights. Hand someone a phone. Watch chaos render itself.
+
+NoPEEK. Because seeing is for cowards.
 
 </div>
