@@ -125,8 +125,6 @@ nopeek/
 
 <div align="center">
 
-### Turn off the lights. Hand someone a phone. Watch chaos render itself.
 
-NoPEEK. Because seeing is for cowards.
 
 </div>
